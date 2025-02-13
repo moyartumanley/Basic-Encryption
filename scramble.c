@@ -6,6 +6,11 @@
 /*
  * This function returns an int that has been scrambled according
  * to the rules set forth in the problem description.
+ * 
+ * Scramble rules:
+ * The bits in the positions labeled x are not moved.
+ * The bit field labeled n swaps positions with the bit field labeled v: the rightmost bit of n moves to position 5 and the leftmost bit of v shifts to position 27.
+ * The field labeled e moves two positions to the left to make room for the swap of the n and v bits.
  *
  */
 
