@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 	scrambled_bin_str = int_to_bin_str(scrambled_input);
 
 	// Expected outcome:
-	expected = 0xa48cbcd4;
+	expected = 0xA48CBCD4;
 
 	// Testing print-statments:
 	printf("Input value:     %x | Binary: %s \n", input, input_bin_str);
