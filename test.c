@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 	free(scrambled_bin_str);
 
 
-	// Test Case 3: Alternating bits
+	// Test Case 3: Alternating bits (1 first)
 	input = 0xAAAAAAAA;
 	input_bin_str = int_to_bin_str(input);
 
@@ -74,5 +74,44 @@ int main(int argc, char *argv[])
 	// Freeing memory:
 	free(input_bin_str);
 	free(scrambled_bin_str);
+
+	// Test Case 4: Alternating bits (0 first)
+	input = 0x55555555;
+	input_bin_str = int_to_bin_str(input);
+
+	scrambled_input = scramble(input);
+	scrambled_bin_str = int_to_bin_str(scrambled_input);
+
+	// Expected outcome:
+	expected = 0x55555555;
+
+	// Testing print-statments:
+	printf("Input value:     %x | Binary: %s \n", input, input_bin_str);
+	printf("Scrambled value: %x | Binary: %s \n\n", scrambled_input, scrambled_bin_str);
+	assert(expected == scrambled_input);
+
+	// Freeing memory:
+	free(input_bin_str);
+	free(scrambled_bin_str);
+
+	// Test Case 5: Non-repeating nibbles
+	input = 0xABCD1234;
+	input_bin_str = int_to_bin_str(input);
+
+	scrambled_input = scramble(input);
+	scrambled_bin_str = int_to_bin_str(scrambled_input);
+
+	// Expected outcome:
+	expected = 0xa48cbcd4;
+
+	// Testing print-statments:
+	printf("Input value:     %x | Binary: %s \n", input, input_bin_str);
+	printf("Scrambled value: %x | Binary: %s \n\n", scrambled_input, scrambled_bin_str);
+	assert(expected == scrambled_input);
+
+	// Freeing memory:
+	free(input_bin_str);
+	free(scrambled_bin_str);
 	return 0;
+
 }
