@@ -3,7 +3,7 @@
     --------------------------------------
     31-28   27-17    16-14   13-5    4-0
 ```
-
+## Encryption:
 The bits will be manipulated according to the following rules.
 * The bits in the positions labeled x are not moved.
 * The bit field labeled n swaps positions with the bit field labeled v: the
