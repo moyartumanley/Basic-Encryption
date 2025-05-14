@@ -15,7 +15,7 @@ The bits will be manipulated according to the following rules.
 
 ## Makefile:
 
-Code can be ran as follows:**
+Code can be run with the following make commands:
 
     make clean
     make 
